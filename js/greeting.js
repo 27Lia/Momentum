@@ -12,6 +12,7 @@ function loginSubmit(event){ // loginForm이 제출될 때 실행되는 함수 l
     const username = loginInput.value;
     localStorage.setItem("username", username); // (저장될 아이템 이름,변수)(key,value)
     paintGreetings(username);
+    
 }
 
 // username을 매개변수로 받아 greeting 요소의 텍스트를 수정하고, "hidden" 클래스를 제거하는 함수 결국, h1요소가 보여지게하는 함수!

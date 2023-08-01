@@ -93,11 +93,11 @@ function handleWeatherData(weather) {
     }
   }
   else if (weather === "Sunny") { //Sunny 경우
-    createSnow()
+    createSunny()
 
   }
   else if (weather === "Snow") { // Snow경우
-    // createSnow()
+    createSnow()
   }
   else {
     etc()

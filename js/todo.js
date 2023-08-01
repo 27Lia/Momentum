@@ -4,19 +4,32 @@ const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("input"); // loginForm 안에서 input 요소를 찾아 loginInput 변수에 할당
 const modalLink = document.getElementById('modal-link');
 const closeButton = document.getElementById('close-button');
+const modalcontainer = document.getElementById("modal-container")
 
 
 
-// TodoModal
+// 모달 표시
 modalLink.addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault();    
+    modalcontainer.classList.add('modal-background');
     modal.classList.remove('hidden'); // 모달 표시
+    modalcontainer.classList.remove('hidden'); 
 });
 
+// 모달 닫는 함수
 function closeModal() {
-    modal.classList.add('hidden');
+  modal.classList.add('hidden');
+  modalcontainer.classList.add('hidden');
 }
-closeButton.addEventListener('click', closeModal);
+//close버튼 클릭시 모달 닫는 이벤트
+closeButton.addEventListener('click',closeModal);
+
+// 모달 밖의 영역을 클릭하면 모달 닫는 이벤트
+window.addEventListener('click', function (event) {
+  if (event.target === modalcontainer) {
+    closeModal();
+  }
+});
 
 //newtodo가 입력된 후 그 이후 값도 업데이트가 가능하도록 let사용
 let toDos = []; 
@@ -28,9 +41,10 @@ function saveTodos() {
 function deleteToDo(event){
     const li = event.target.parentElement; // 이벤트가 발생한 요소(button을 가리킴)의 부모 요소인 <li> 요소를 선택하는 코드 (즉 button의 부모인 li를 선택!) 
     li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); //toDo는 parsedToDos 배열의 각각의 item들 즉, toDo.id는 각 아이템들의 id 😞어려워. 이해필요! 
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); //toDo는 parsedToDos 배열의 각각의 item들 즉, toDo.id는 각 아이템들의 id 
     saveTodos(); // 업데이트 된 toDos 배열을 로컬 스토리지에 저장
 }
+
 function handleToDoCheck(event) {
     const checkbox = event.target;
     const li = checkbox.parentElement;
@@ -42,9 +56,8 @@ function handleToDoCheck(event) {
     }
 
   }
-function paintToDo(newToDo){
-    
 
+function paintToDo(newToDo){
     const li = document.createElement("li");
     li.id = newToDo.id; 
 

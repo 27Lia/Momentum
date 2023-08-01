@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,64 +10,65 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rain.css">
 
-</head> 
-<body id="weatherimg" >
-     <header class="container">
-            <nav>
-            <form class="hidden" id="login-form">
-                <input required maxlength="15" type="text" placeholder="What is your name?" class="nameinput"> <!--input 유효성 검사를위해서는 input이 form안에 존재해야한다-->
-                <button class="searchbtn"><i class="fa-solid  fa-3x fa-magnifying-glass"></i></button>
-            </form>
-            <button id="modal-link">To do List</button>
-            </nav>       
+</head>
+
+<body id="weatherimg">
+    <header class="container">
+        <form class="hidden" id="login-form">
+            <input required maxlength="15" type="text" placeholder="What is your name?" class="nameinput">
+            <!--input 유효성 검사를위해서는 input이 form안에 존재해야한다-->
+            <button class="searchbtn"><i class="fa-solid  fa-3x fa-magnifying-glass"></i></button>
+        </form>
+        <button id="modal-link">To do List</button>
     </header>
 
-    <div class="other">
-        <!-- 인사말 -->
-        <h1 id="greeting" class="hidden"></h1>
-        <!-- 날씨 정보 -->
-        <div id="weather">
-            <span></span>
-            <span class="region"></span>
+    <main>
+        <div class="other">
+            <!-- 인사말 -->
+            <h1 id="greeting" class="hidden"></h1>
+            <!-- 날씨 정보 -->
+            <div id="weather">
+                <span></span>
+                <span class="region"></span>
+            </div>
+            <!-- 시간정보 -->
+            <div class="clockbox">
+                <h2 id="clock">00:00</h2>
+            </div>
+            <!-- 명언 -->
+            <div class="quotescontainer">
+                <div id="quotes"></div>
+            </div>
         </div>
-        <!-- 시간정보 -->
-        <div class="clockbox">
-        <h2 id="clock">00:00</h2>
-        </div>
-        <!-- 명언 -->
-        <div class="quotescontainer">
-        <div id="quotes"></div>
-        </div>
+    </main>
 
-
+    <!-- 투두 폼 -->
+    <div id="modal-container" class="hidden">
+        <div id="modal" class="hidden">
+            <button id="close-button"><i class="fa-solid fa-3x fa-xmark"></i></button>
+            <!-- modal-header -->
+            <div class="modal-header">
+                <h1 class="modal-title">To Do List</h1>
+            </div>
+            <!-- modal-body -->
+            <div class="modal-body">
+                <form id="todo-form">
+                    <input class="todoinput" type="text" placeholder="To Do and Press Enter">
+                </form>
+                <ul id="todo-list">
+                </ul>
+            </div>
+        </div>
     </div>
-            <!-- 투두 폼 -->
-            <article > 
-                <div id="modal" class="hidden">
-                    <button id="close-button"><i class="fa-solid fa-3x fa-xmark"></i></button>
-                    <!-- modal-header -->
-                    <div class="modal-header">
-                        <h1 class="modal-title">To Do List</h1>
-                    </div>
-                    <!-- modal-body -->
-                    <div class="modal-body">
-                    <form id="todo-form">
-                        <input class="todoinput" type="text" placeholder="To Do and Press Enter">
-                    </form>
-                    <ul id="todo-list">
-                    </ul>
-                    </div>
-                </div>
-            </article>
 
 
 
 
 
     <!-- snow도장 -->
-        <div class="footprints">
+    <div class="footprints">
 
-        </div>
+    </div>
 
 
 
@@ -80,6 +82,7 @@
 
 
 </body>
+
 </html>
 
 

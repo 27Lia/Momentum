@@ -9,24 +9,22 @@
 body {
     background-color: #eaf0ff;
     min-height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+button {
+    cursor:pointer;
 }
 .hidden {
     display: none;
 }
 
+
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    
-}
-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 125px;
 }
 
@@ -94,6 +92,16 @@ nav {
     color: #83677d;  
 }
 
+/* modal */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 배경에 반투명한 검은색 레이어 추가 */
+}
+
 
 #modal-link {
     background-color: #93a5f4;
@@ -107,7 +115,7 @@ nav {
 }
 
 #modal {
-    background-color: #fdfeffde;
+    background-color: #fdfefff8;
     width: 550px;
     height: 670px;
     position: fixed;
@@ -147,12 +155,11 @@ nav {
     color: #7b7979;
     font-size: 26px;
     margin-bottom: 40px;
-    text-align: center;   
 }
 
 input[type="checkbox"] {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid #ffa099;
     appearance: none;
