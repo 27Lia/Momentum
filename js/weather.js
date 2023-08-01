@@ -46,17 +46,17 @@ function createRaindrop() {
     const SnowEl = document.getElementById('weatherimg');
     SnowEl.classList.add("snowbackground");
     // 스탬프              
-    const snow_init = () => {
-      document.addEventListener("click", (e) => {
-          const div = document.createElement("div")
-          div.innerText = "⛈";
-          div.style.fontSize = `${Math.random() * 8 + 2}rem`
-          div.style.top = `calc(${e.y}px - 0.5em)`
-          div.style.left = `calc(${e.x}px - 0.5em)`
-          document.querySelector(".snow").appendChild(div)          
-          document.querySelector(".snow .footprints").appendChild(div)
-      })
-    }
+    // const snow_init = () => {
+    //   document.addEventListener("click", (e) => {
+    //       const div = document.createElement("div")
+    //       div.innerText = "⛈";
+    //       div.style.fontSize = `${Math.random() * 8 + 2}rem`
+    //       div.style.top = `calc(${e.y}px - 0.5em)`
+    //       div.style.left = `calc(${e.x}px - 0.5em)`
+    //       document.querySelector(".snow").appendChild(div)          
+    //       document.querySelector(".snow .footprints").appendChild(div)
+    //   })
+    // }
     
     snow_init();
   }
@@ -64,16 +64,16 @@ function createRaindrop() {
 
 // 날씨 데이터를 처리하는 함수
 function handleWeatherData(weather) {
-    if ( weather === "aa") {   //Rain 경우 
+    if ( weather === "Rain") {   //Rain 경우 
       for (let i = 0; i < 20; i++) {
         createRaindrop();
       }
     } 
-        else if (weather === "d") { //Clouds 경우
+        else if (weather === "Clouds") { //Clouds 경우
           createClouds()
           
       } 
-        else if (weather === "a") { //Sunny 경우
+        else if (weather === "Sunny") { //Sunny 경우
         // createSunny()
         // createRaindrop()
         // createClouds()
@@ -81,9 +81,9 @@ function handleWeatherData(weather) {
 
       }
         else { // Snow경우
-          createSnow()
+          // createSnow()
         //  createSunny()
-        // createRaindrop()
+        createRaindrop()
         // createClouds()
 
       }}
