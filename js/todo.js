@@ -54,22 +54,21 @@ function handleToDoCheck(event) {
     } else {
       li.classList.remove("completed");
     }
-
   }
 
 function paintToDo(newToDo){
     const li = document.createElement("li");
     li.id = newToDo.id; 
-
     const checkbox = document.createElement("input");
     checkbox.classList.add("todo-checkbox")
     checkbox.type = "checkbox";
     checkbox.addEventListener("change", handleToDoCheck);
     li.appendChild(checkbox);
 
-    const span = document.createElement("span");
-    span.innerText = newToDo.text; 
-    li.appendChild(span); // li자식으로 span을 넣어줌
+    const input = document.createElement("input");
+    input.value = newToDo.text; 
+    input.classList.add("input-list")
+    li.appendChild(input); // li자식으로 span을 넣어줌
 
     const trashButton = document.createElement("button");
     trashButton.innerText = "X";
@@ -77,8 +76,26 @@ function paintToDo(newToDo){
     trashButton.addEventListener("click", deleteToDo);
     li.appendChild(trashButton);
 
+    const editButton = document.createElement("button");
+    editButton.innerHTML = '<i class="fa-regular fa-pen-to-square"></i>';
+    editButton.classList.add("edit")
+    editButton.addEventListener("click", () => startEditing(li, newToDo));
+    li.appendChild(editButton);
+
     toDoList.appendChild(li);
 }
+
+function startEditing(li, newToDo) {
+  console.log(li,newToDo)
+  span.replaceWith(input);
+  input.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        finishEditing(li, newToDo, input.value);
+    }
+});
+}
+
+
 
 // ToDoSubmit 할 때 실행되는 함수, 
 function handleToDoSubmit(event){ 

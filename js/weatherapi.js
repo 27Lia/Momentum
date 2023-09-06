@@ -34,9 +34,3 @@ function onGeoError() {
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
 
-
-// div를 여러개 선택하여 클래스명 동일하게 만들어줄수있음.
-// raindrop.querySelectorAll("div").forEach((div) => {
-//   div.classList.add("raining");
-// });
-

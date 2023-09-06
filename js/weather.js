@@ -96,7 +96,7 @@ function handleWeatherData(weather) {
     createSunny()
 
   }
-  else if (weather === "Snow") { // Snow경우
+  else if (weather === "Clear") { // Snow경우
     createSnow()
   }
   else {

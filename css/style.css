@@ -14,9 +14,28 @@ body {
 
 button {
     cursor:pointer;
+    border: none;
 }
+
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffa099;
+    color: #fff;
+    width: 21px;
+    height: 21px;
+    border-radius: 3px;
+    margin-left: 4px;
+}
+
 .hidden {
     display: none;
+}
+
+input {
+    border: none;
+    background-color: transparent;
 }
 
 
@@ -178,7 +197,7 @@ input[type="checkbox"] {
   input[type="checkbox"]:checked::before {
     content: '\2713';
     display: block;
-    font-size: 2.5rem;
+    font-size: 30px;
     color: white;
     text-align: center;
   }
