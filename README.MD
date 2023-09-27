@@ -6,9 +6,9 @@
 ## snow
 <img src = "https://github.com/27Lia/fe-sprint-coz-shopping/assets/117743861/ef234feb-cd8d-4ba3-add1-7c477cfaab39" width = "500" height="250">
 
-## cloud
+## rain
 <img src = "https://github.com/27Lia/fe-sprint-coz-shopping/assets/117743861/d3c8b27d-80ef-4764-aae9-ab2fb0aff9eb" width = "500" height="250">
 
-## rain
+## cloud
 <img src = "https://github.com/27Lia/fe-sprint-coz-shopping/assets/117743861/e3ff1126-b959-406c-bbad-8c1d6fe532d1" width = "500" height="250">
 <br>
