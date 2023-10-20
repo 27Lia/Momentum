@@ -74,12 +74,6 @@ function createSnow() {
   snow_init();
 }
 
-// 아무것도 아닌 날씨 
-function etc() {
-  const etcEl = document.querySelector('body');
-  etcEl.style.backgroundColor = '#6886C5';
-}
-
 // 날씨 데이터를 처리하는 함수
 function handleWeatherData(weather) {
   if (weather === "Rain") {   //Rain 경우 
@@ -98,9 +92,6 @@ function handleWeatherData(weather) {
   }
   else if (weather === "Snow") { // Snow경우
     createSnow()
-  }
-  else {
-    etc()
   }
 }
 

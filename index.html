@@ -8,11 +8,12 @@
     <script src="https://kit.fontawesome.com/1d13e6db91.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/rain.css">
 
 </head>
 
 <body id="weatherimg">
+    <div id="particles-js"></div>
+
     <header class="container">
         <form class="hidden" id="login-form">
             <input required maxlength="15" type="text" placeholder="What is your name?" class="nameinput">
@@ -75,12 +76,16 @@
     <!-- 스크립트파일 -->
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weatherapi.js" type="module"></script>
     <script src="js/weather.js" type="module"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+          console.log('particles.js loaded - callback');
+        });
+      </script>
 </body>
 
 </html>

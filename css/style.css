@@ -76,7 +76,7 @@ header {
 }
 
 .other {
-    margin-top: 300px;
+    margin-top: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,16 +99,6 @@ header {
     font-size: 170px;
     color: #fff; 
     
-}
-
-.quotescontainer {
-    line-height: 26px;
-}
-#quotes {
-    font-size: 20px;
-    line-height: 28px;
-    width: 380px;  
-    color: #83677d;  
 }
 
 /* modal */
@@ -323,8 +313,11 @@ li > span {
  .footprints img {
     position: fixed;
 }
-
-/* 기타 */
-.etc {
-    background: linear-gradient(to left, #1f3fa7 20%, transparent 20%);
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background-color: #95a4e7ae;
 }
